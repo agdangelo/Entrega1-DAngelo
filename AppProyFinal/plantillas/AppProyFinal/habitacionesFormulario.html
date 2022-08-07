@@ -1,0 +1,29 @@
+{% extends "AppProyFinal/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h1>Si quiere dar de alta una habitación de hotel, complete el formulario:</h1>
+
+<!-- <h4>(las fechas deben cargarse con el formato AAAA-MM-DD)</h4>  -->
+
+{% if miFormulario.errors %}
+<p style="color: red;"> Están mal los datos, revisar por favor</p>
+{% endif %}
+
+<form action="" method ="POST"> {% csrf_token %}
+
+    <table>
+
+        {{ miFormulario.as_table }}
+
+    </table>
+
+    <input type="submit", value ="Enviar">
+
+</form> 
+
+
+
+{% endblock %}

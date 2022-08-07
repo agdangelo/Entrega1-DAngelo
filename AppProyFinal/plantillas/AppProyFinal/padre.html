@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  {% load static %}
+<head>
+<title>Luxury Hotel</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="{% static 'AppProyFinal/css/styles.css' %}" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="container">
+  <div id="header"> <img src="{% static 'AppProyFinal/images/logo.jpg' %}" width="328" height="71" alt="" id="logo"/> <img src="{% static 'AppProyFinal/images/slogan.jpg' %}" width="310" height="77" alt="" id="slogan"/>
+    <ul class="menu">
+      <li class="btn_1bis"><a href="{% url 'Inicio' %}">Home</a></li>
+      <li class="line"></li>
+      <li class="btn_1"><a href="{% url 'HotelesFormulario' %}">hotelesFormulario</a></li>
+      <li class="line"></li>
+      <li class="btn_11"><a href="{% url 'HotelesBusqueda' %}">hotelesBusqueda</a></li>
+      <li class="line"></li>
+      <li class="btn_4"><a href="{% url 'HabitacionesFormulario' %}">Habitaciones</a></li>
+      <li class="line"></li>
+      <li class="btn_5"><a href="{% url 'ReservasFormulario' %}">Reservas</a></li>
+      <li class="line"></li>
+      <li class="btn_7"><a href="{% url 'Contacto' %}">Contacto</a></li>
+    </ul>
+  </div>
+
+    <!-- esto es código hereditario -->
+    {% block contenidoQueCambia %}
+
+
+  <div id="content">
+    <div id="leftPan">
+      <div id="room">
+        <h2></h2>
+        <img src="{% static 'AppProyFinal/images/img_has.jpg' %}" width="179" height="81" alt="" />
+        <p><span class="headline">Lorem ipsum dolor sit amet,</span><br />
+          Mauris tincidunt, quam ac porta viverra, turpis sapien egestas mauris, et suscipit nulla orci sed odio. In ac sem Mauris tincidunt, quam ac porta </p>
+        <ul>
+          <li><a href="#">Mauris tincidunt, quam ac porta </a></li>
+          <li><a href="#">viverra, turpis sapien egestas </a></li>
+          <li><a href="#">mauris, et suscipit nulla orci sed </a></li>
+          <li><a href="#">odio. In ac sem Mauris tincidunt,</a></li>
+          <li><a href="#">Mauris tincidunt, quam ac porta </a></li>
+          <li><a href="#">viverra, turpis sapien egestas </a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="rightPan">
+      <div id="welcome">
+        <h2></h2>
+        <p><span class="headline">Lorem ipsum dolor sit amet</span><br />
+          Mauris tincidunt, quam ac porta viverra, turpis sapien egestas mauris, et suscipit nulla orci sed odio. In ac sem Mauris tincidunt, quam ac porta viverra, turpis sapien egestas mauris, et nulla orci sed odio. Nam augue nulla, feugiat a, mattis varius, tempus eget, erat. <a href="#">more...</a></p>
+        <ul>
+          <li><a href="#">Mauris tincidunt, quam ac porta viverra, </a></li>
+          <li><a href="#">turpis sapien egestas mauris, et suscipit </a></li>
+          <li><a href="#">nulla orci sed odio. In ac sem Mauris </a></li>
+          <li><a href="#">tincidunt, Mauris tincidunt, quam ac porta </a></li>
+          <li><a href="#">viverra, turpis sapien egestas </a></li>
+        </ul>
+        <div class="clear"></div>
+      </div>
+      <div id="services">
+        <h2></h2>
+        <div class="servItem"> <img src="{% static 'AppProyFinal/images/img_services.jpg' %}" width="45" height="40" alt="" />
+          <p><span class="headline">Lorem ipsum dolor sit amet</span><br />
+            Mauris tincidunt, quam ac porta viverra, turpis sapien egestas <a href="#">more...</a></p>
+          <div class="clear"></div>
+        </div>
+        <div class="servItem"> <img src="{% static 'AppProyFinal/images/img_services-14.jpg' %}" width="45" height="40" alt="" />
+          <p><span class="headline">Lorem ipsum dolor sit amet</span><br />
+            Mauris tincidunt, quam ac porta viverra, turpis sapien egestas <a href="#">more...</a></p>
+          <div class="clear"></div>
+        </div>
+        <div class="servItem"> <img src="{% static 'AppProyFinal/images/img_services-15.jpg' %} width="45" height="40" alt="" />
+          <p><span class="headline">Lorem ipsum dolor sit amet</span><br />
+            Mauris tincidunt, quam ac porta viverra, turpis sapien egestas <a href="#">more...</a></p>
+          <div class="clear"></div>
+        </div>
+      </div>
+      <div id="activities">
+        <h2></h2>
+        <img src="{% static 'AppProyFinal/images/img_activities.jpg' %}" width="196" height="70" alt="" />
+        <p><span class="headline">Lorem ipsum dolor sit amet</span><br />
+          Mauris tincidunt, quam ac porta viverra, turpis sapien egestas mauris, et suscipit nulla orci sed odio. In ac sem Mauris tincidunt, quam ac porta viverra, turpis <a href="#">more...</a></p>
+      </div>
+    </div>
+    <div class="clear" id="end"></div>
+  </div>
+
+  {% endblock %}
+
+
+  <div id="footer">
+    <p><a href="{% url 'Inicio' %}">HOME PAGE</a> | <a href="{% url 'HotelesFormulario' %}">HOTEL</a> | <a href="{% url 'HotelesBusqueda' %}">HOTEL SEARCH</a> | <a href="{% url 'HabitacionesFormulario' %}">ROOMS</a> | <a href="{% url 'ReservasFormulario' %}">BOOKING</a> | <a href="{% url 'Contacto' %}">CONTACTS</a> <br/>
+      Copyright &copy; Your Company Name | Design by <a href="http://freshtemplates.com/">Website Templates</a></p>
+  </div>
+</div>
+</body>
+</html>

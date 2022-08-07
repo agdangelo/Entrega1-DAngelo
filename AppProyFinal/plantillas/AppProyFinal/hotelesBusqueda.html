@@ -1,0 +1,27 @@
+{% extends "AppProyFinal/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+<h1>Buscador de Hoteles:</h1>
+
+<h2>Ingrese el nombre de una ciudad y busque el hotel: <br> <br> <br> </h2>
+<!-- <h4>(las fechas deben cargarse con el formato AAAA-MM-DD)</h4>  -->
+
+{% if miFormulario.errors %}
+<p style="color: red;"> Están mal los datos, revisar por favor</p>
+{% endif %}
+
+<form action="/AppProyFinal/buscar/" method ="GET">
+
+    
+    <input type="text", name="ciudad", id ="ciudad">
+
+    <input type="submit", value ="Buscar">
+
+</form> 
+
+
+
+{% endblock %}

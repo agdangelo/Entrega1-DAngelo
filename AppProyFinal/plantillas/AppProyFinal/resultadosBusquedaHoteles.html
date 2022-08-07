@@ -1,0 +1,38 @@
+{% extends "AppProyFinal/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+
+{% if hoteles %}
+
+<br><p><h2>Resultado busqueda del hotel en la ciudad de {{ciudad}}: </h2></p> <br><br>
+
+
+
+<u1>
+    {% for hotel in hoteles %}
+
+    <h3><li>  Nombre: {{hotel.nombre}} <br>
+            Fecha de Inauguración: {{hotel.fechaApertura}} <br>
+            Está abierto?: {{hotel.abierto}} <br>
+            Estrellas: {{hotel.estrellas}} <br>
+            Ciudad: {{hotel.ciudad}} <br>
+            País: {{hotel.pais}} <br>
+            Dirección: {{hotel.direccion}} <br><br><br></li></h3>
+
+    {% endfor %}
+
+</u1>
+
+{% else %}
+
+<p><h2> <br> No hay hoteles en esa ciudad</h2></p> <br> <br> 
+
+
+{% endif %}
+
+<p style="color: red;"> {{respuesta}} </p>
+
+{% endblock %}
